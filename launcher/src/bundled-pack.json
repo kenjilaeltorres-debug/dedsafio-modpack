@@ -1,0 +1,16 @@
+{
+  "complement": {
+    "name": "dedsafio4-complemento-core-0.1.0-beta2-compat.1-1.21.1.jar",
+    "size": 36768496,
+    "sha256": "669732ac603a97d0325581a2afd795a2b3a5f32ab8ffb99404c3feee1804197f"
+  },
+  "menu": {
+    "name": "mantis-studio-menu-0.2.3.jar",
+    "size": 103090485,
+    "sha256": "f1e0ffb018ac9c3d48855672ecdb2c05d2662964cfaace218612a726d6e10966"
+  },
+  "legacyComplement": {
+    "path": "mods/dedsafio4-complemento-core-0.1.0-beta2-1.21.1.jar",
+    "sha256": "aa5a740e652ba703f81f3e7a165cf1a5972b81b03964e06b4be51a06d3e41acf"
+  }
+}
