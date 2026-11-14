@@ -1,0 +1,83 @@
+{
+  "name": "dedsafio-community-launcher",
+  "version": "0.2.1",
+  "description": "Mantis Studio \u00b7 Dedsaf\u00edo y Mantis SMP",
+  "author": "Mantis Studio",
+  "license": "MIT",
+  "private": true,
+  "main": "src/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test test/*.test.cjs",
+    "pack:windows": "electron-builder --win zip --x64 --publish never",
+    "installer:windows": "electron-builder --win nsis --x64 --publish never",
+    "manifest": "node scripts/create-manifest.cjs"
+  },
+  "dependencies": {
+    "electron-updater": "6.8.9",
+    "extract-zip": "2.0.1",
+    "minecraft-launcher-core": "3.18.2",
+    "msmc": "5.0.5"
+  },
+  "devDependencies": {
+    "7zip-bin": "5.2.0",
+    "electron": "45.2.1",
+    "electron-builder": "26.18.0",
+    "linkedom": "0.18.12",
+    "resedit": "1.7.2"
+  },
+  "build": {
+    "appId": "community.dedsafio.launcher",
+    "productName": "Mantis Studio",
+    "artifactName": "Mantis-Studio-${version}-Instalador.${ext}",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "src/**/*",
+      "ui/**/*",
+      "launcher.config.json",
+      "package.json",
+      "LICENSE"
+    ],
+    "asar": true,
+    "extraFiles": [
+      {
+        "from": "launcher.config.json",
+        "to": "launcher.config.json"
+      }
+    ],
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "signAndEditExecutable": false,
+      "icon": "ui/assets/mantis.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": false,
+      "createDesktopShortcut": true,
+      "include": "build/installer.nsh"
+    },
+    "asarUnpack": [
+      "ui/assets/*.webm"
+    ],
+    "afterPack": "scripts/windows-brand.cjs",
+    "extraResources": [
+      {
+        "from": "bundled-mods",
+        "to": "bundled-mods"
+      }
+    ],
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://github.com/kenjilaeltorres-debug/dedsafio-modpack/releases/download/launcher-current/"
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "brand": "MANTIS ESTUDIO",
+  "subtitle": "Edición Dedsafio 4",
+  "manifestUrl": "https://github.com/kenjilaeltorres-debug/dedsafio-modpack/releases/latest/download/manifest.json",
+  "serverAddress": "FABRESAFIO.exaroton.me:54470",
+  "microsoftClientId": "",
+  "microsoftRedirect": "https://login.live.com/oauth20_desktop.srf",
+  "allowLocalProfiles": true,
+  "minecraftVersion": "1.21.1",
+  "fabricLoader": "0.19.0",
+  "news": [
+    {
+      "tag": "COMUNIDAD",
+      "title": "Un mundo, dos desafíos",
+      "body": "La recreación que une nuestra aventura. El launcher organiza tu instalación y las próximas actualizaciones."
+    },
+    {
+      "tag": "PRIMER ACCESO",
+      "title": "Todo en su sitio",
+      "body": "Configura el servidor y el manifiesto del modpack para empezar. Tus mundos, capturas y controles se conservan."
+    }
+  ],
+  "launcherUpdateUrl": "https://github.com/kenjilaeltorres-debug/dedsafio-modpack/releases/download/launcher-current/",
+  "profiles": {
+    "smp": {
+      "manifestUrl": "https://github.com/kenjilaeltorres-debug/dedsafio-modpack/releases/download/smp-current/manifest.json",
+      "serverAddress": "51.81.174.167:25592",
+      "fabricLoader": "0.20.1"
+    }
+  }
+}
